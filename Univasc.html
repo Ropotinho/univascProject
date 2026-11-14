@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+    <header>
+        <div class="bar">
+            <a class="brand" href="#inicio">Univ<i>asc</i></a>
+            <nav id="nav" aria-label="Navegação principal">
+                <a href="#inicio" data-p="inicio">Início</a><a href="#servicos" data-p="servicos">Serviços</a><a
+                    href="#sobre" data-p="sobre">Sobre nós</a><a href="#portfolio" data-p="portfolio">Portfólio</a><a
+                    href="#contato" data-p="contato">Contato</a>
+            </nav>
+            <a class="btn" href="#orcamento">Solicitar orçamento</a>
+            <button class="ico tm" id="theme" aria-label="Alternar tema claro e escuro">◐</button>
+            <button class="ico" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- INÍCIO -->
+        <section class="pg" id="p-inicio" aria-label="Início">
+            <div class="hero">
+                <div>
+                    <h1>Seu negócio merece um site à altura</h1>
+                    <p class="lead">A Univasc cria sites, catálogos digitais, lojas virtuais e landing pages para MEIs e
+                        microempreendedores, com prazo definido e preço justo.</p>
+                    <div class="row"><a class="btn" href="#orcamento">Solicitar orçamento</a><a class="btn out"
+                            href="#portfolio">Veja nossos projetos</a></div>
+                    <div class="stats">
+                        <div><strong data-n="40">0</strong>sites entregues</div>
+                        <div><strong data-n="7">0</strong>dias para o primeiro rascunho</div>
+                        <div><strong data-n="100" data-s="%">0</strong>adaptado ao celular</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="mock" aria-live="polite">
+                        <div class="mk-top"><b></b><b></b><b></b><span id="mkUrl"></span></div>
+                        <div class="mk-body" id="mkBody">
+                            <h3 id="mkT"></h3>
+                            <p id="mkP"></p><span class="b" id="mkB"></span>
+                        </div>
+                        <div class="chips" id="chips" role="group" aria-label="Escolha o tipo de negócio"></div>
+                    </div>
+                    <p class="cap">Escolha um ramo para ver como seu site pode ficar.</p>
+                </div>
+            </div>
+            <div class="grid" style="margin-top:56px">
+                <div class="card">
+                    <h3>Conheça nossos serviços</h3>
+                    <p>Quatro formatos de site para cada fase do seu negócio, do cartão de visitas digital à loja
+                        completa.</p><a class="link" href="#servicos">Ver serviços</a>
+                </div>
+                <div class="card">
+                    <h3>Veja nossos projetos</h3>
+                    <p>Exemplos de trabalhos para barbearias, confeitarias, consultórios e outros pequenos negócios.</p>
+                    <a class="link" href="#portfolio">Ver portfólio</a>
+                </div>
+                <div class="card">
+                    <h3>Solicitar orçamento</h3>
+                    <p>Preencha um formulário de três minutos e receba uma proposta sem compromisso.</p><a class="link"
+                        href="#orcamento">Pedir orçamento</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="pg" id="p-servicos" aria-label="Serviços">
+            <h2>Serviços</h2>
+            <p class="sub">Escolha o formato ideal para o momento do seu negócio. Todos incluem layout adaptado ao
+                celular, hospedagem inicial e suporte após a entrega.</p>
+            <div class="tabs" role="tablist" id="svTabs"></div>
+            <div id="svPanel" role="tabpanel"></div>
+        </section>
+
+        <!-- SOBRE NÓS -->
+        <section class="pg" id="p-sobre" aria-label="Sobre nós">
+            <h2>Sobre nós</h2>
+            <p class="sub">Somos uma equipe pequena e dedicada a quem está começando a empreender.</p>
+            <div class="tabs" role="tablist" id="abTabs"></div>
+            <div id="abPanel" role="tabpanel"></div>
+        </section>
+
+        <!-- PORTFÓLIO -->
+        <section class="pg" id="p-portfolio" aria-label="Portfólio">
+            <h2>Portfólio</h2>
+            <p class="sub">Projetos de exemplo que mostram o padrão de qualidade das nossas entregas. Selecione um
+                projeto para ver os detalhes.</p>
+            <div class="chips" style="padding:0 0 22px;border:0" id="pjF" role="group" aria-label="Filtrar projetos">
+            </div>
+            <div class="grid" id="pjList"></div>
+            <dialog id="pjDlg" aria-labelledby="dT">
+                <div class="dl" id="dBody"></div>
+            </dialog>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="pg" id="p-contato" aria-label="Contato">
+            <h2>Contato</h2>
+            <p class="sub">Escolha o canal que for mais prático. Respondemos em até um dia útil.</p>
+            <div class="grid cc">
+                <div class="card">
+                    <h3>Redes sociais</h3>
+                    <p>Acompanhe novidades e bastidores dos projetos.</p>
+                    <div class="row" style="margin-top:14px"><a class="btn out" target="_blank" rel="noopener"
+                            href="https://instagram.com/univasc">Instagram</a><a class="btn out" target="_blank"
+                            rel="noopener" href="https://linkedin.com/company/univasc">LinkedIn</a></div>
+                </div>
+                <div class="card">
+                    <h3>E-mail</h3>
+                    <p id="mail">contato@univasc.com.br</p>
+                    <div class="row" style="margin-top:14px"><a class="btn out"
+                            href="mailto:contato@univasc.com.br">Enviar e-mail</a><button class="btn out"
+                            id="copy">Copiar endereço</button></div>
+                </div>
+                <div class="card">
+                    <h3>WhatsApp</h3>
+                    <p>(67) 99999-0000<br>Segunda a sexta, das 8h às 18h.</p>
+                    <div class="row" style="margin-top:14px"><a class="btn" target="_blank" rel="noopener"
+                            href="https://wa.me/5567999990000?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Univasc.">Abrir
+                            conversa</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORÇAMENTO -->
+        <section class="pg" id="p-orcamento" aria-label="Solicitar orçamento">
+            <div class="steps"><span id="s1" class="on">1. Formulário de orçamento</span><span id="s2">2. Confirmação e
+                    contato</span></div>
+            <div id="qForm">
+                <h2>Solicitar orçamento</h2>
+                <p class="sub">Conte um pouco sobre o seu negócio. Os campos marcados com * são obrigatórios.</p>
+                <form id="f" novalidate>
+                    <div class="f2"><label>Nome completo *<input name="nome" autocomplete="name"><span
+                                class="err"></span></label><label>Nome do negócio *<input name="negocio"><span
+                                class="err"></span></label></div>
+                    <div class="f2"><label>E-mail *<input name="email" type="email" autocomplete="email"><span
+                                class="err"></span></label><label>WhatsApp *<input name="tel" inputmode="tel"
+                                placeholder="(67) 99999-0000" autocomplete="tel"><span class="err"></span></label></div>
+                    <div class="f2"><label>Serviço desejado *<select name="servico"></select><span
+                                class="err"></span></label>
+                        <label>Prazo desejado<select name="prazo">
+                                <option>Sem pressa</option>
+                                <option>Até 30 dias</option>
+                                <option>Até 15 dias</option>
+                                <option>Urgente (7 dias)</option>
+                            </select></label>
+                    </div>
+                    <fieldset>
+                        <legend>Recursos extras</legend><span id="extras" class="row"></span>
+                    </fieldset>
+                    <label>Mensagem<textarea name="msg" rows="4" maxlength="500"
+                            placeholder="Fale sobre seu negócio, suas ideias e referências."></textarea></label>
+                    <div class="row"><button class="btn" type="submit">Enviar solicitação</button><button
+                            class="btn out" type="reset" id="rst">Limpar</button></div>
+                </form>
+            </div>
+            <div id="qOk" class="ok" hidden>
+                <div class="seal" aria-hidden="true">✓</div>
+                <h2>Solicitação enviada</h2>
+                <p class="sub" id="okTxt"></p>
+                <dl class="sum" id="sum"></dl>
+                <div class="row"><a class="btn" id="okWa" target="_blank" rel="noopener" href="#">Agilizar pelo
+                        WhatsApp</a><button class="btn out" id="again">Fazer nova solicitação</button></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div><span>© <span id="yr">2026</span> Univasc. Sites para quem
+                empreende.</span><span>contato@univasc.com.br</span></div>
+    </footer>
+    <div class="toast" id="toast" role="status"></div>
+
+
+      <script src="script.js"></script>
+</body>
+
+</html>
